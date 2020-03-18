@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://kit.fontawesome.com/8fdf2ad5ce.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div class="demo">
+    <div id="app"></div>
+  </div>
+  <script type="text/babel">
+    class App extends React.Component {
+      render() {
+        return (
+          <div className="notificationsFrame">
+            <div className="panel">{}</div>
+            <Header />
+          </div>
+        );
+      }
+    }
+
+    class Header extends React.Component {
+      render() {
+        return (
+          <div className="header">
+            <div className="menuIcon">
+              <div className="dashTop"></div>
+              <div className="dashBottom"></div>
+              <div className="circle"></div>
+            </div>
+            <span className="title">Timeline</span>
+
+            <input type="text" className="searchInput" placeholder="Search ..." />
+
+            <div className="fas fa-search searchIcon"></div>
+          </div>
+        );
+      }
+    }
+
+    const mount = document.querySelector('#app');
+    ReactDOM.render(<App />, mount);
+  </script>
+</body>
+</html>
